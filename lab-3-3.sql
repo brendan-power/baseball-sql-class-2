@@ -17,6 +17,6 @@
 
 SELECT year, name, max (wins)
 FROM teams
-WHERE year > 1960
+WHERE year >= 1960
 GROUP BY year
-ORDER BY wins;
+ORDER BY MAX (wins) DESC;
